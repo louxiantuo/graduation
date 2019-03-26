@@ -9,8 +9,8 @@ public class UrlData {
     //MQTT通信地址
     public static String mqtt = "tcp://louxiantuo.club:1883";
 
-    public static String topic = "intopic";   //subscribe
+    public static String topic_in = "inTopic";
 
-
+    public static String topic_out = "outTopic";//subscribe
 
 }

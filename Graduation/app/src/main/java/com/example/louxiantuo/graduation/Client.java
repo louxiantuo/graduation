@@ -42,7 +42,7 @@ public class Client {
             client.connect(options);
             //订阅消息
             //client.subscribe(UrlData.root,1);
-            client.subscribe(UrlData.topic, 1);
+            client.subscribe(UrlData.topic_out, 1);
 
         } catch (MqttException e) {
             e.printStackTrace();
