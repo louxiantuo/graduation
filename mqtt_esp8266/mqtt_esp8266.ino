@@ -1,3 +1,5 @@
+
+
 /*
  Basic ESP8266 MQTT example
 
@@ -22,6 +24,13 @@
   - Select your ESP8266 in "Tools -> Board"
 
 */
+
+#include <Ethernet.h>
+#include <Dns.h>
+#include <EthernetClient.h>
+#include <EthernetServer.h>
+#include <Dhcp.h>
+#include <EthernetUdp.h>
 
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
