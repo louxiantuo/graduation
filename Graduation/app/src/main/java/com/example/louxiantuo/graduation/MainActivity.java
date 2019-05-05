@@ -100,6 +100,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button button_reset =(Button)findViewById(R.id.reset);
+        button_reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //发送mqtt测试
+
+                mClient.sendCmd("A",UrlData.topic_out);
+                mClient.sendCmd("B",UrlData.topic_out);
+                mClient.sendCmd("C",UrlData.topic_out);
+                mClient.sendCmd("D",UrlData.topic_out);
+                mClient.sendCmd("E",UrlData.topic_out);
+
+                Toast.makeText(MainActivity.this,"重启中",Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
         textView_wifiState2 = (TextView) findViewById(R.id.WifiState2);

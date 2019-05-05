@@ -184,4 +184,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="刷新所有设备状态"/>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重启所有设备"/>
 </LinearLayout>
