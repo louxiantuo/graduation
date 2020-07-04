@@ -39,7 +39,7 @@
 
 const char* ssid = "downstairs";
 const char* password = "19711219";
-const char* mqtt_server = "louxiantuo.club";
+const char* mqtt_server = "loumqttserver.duckdns.org";
 char message[128];
 char get_message[128];
 
@@ -96,14 +96,14 @@ void callback(char* topic, byte* payload, unsigned int length) {
   //message[length+1] = '\n';
   //char limit[3] = "\r\n";
   Serial.println(message);
-  if(message[0] == '0'){
+  if(message[0] == 'b'){
     Serial.println("in2low");
     digitalWrite(16,LOW);  
     //int k = digitalRead(5);
     //Serial.println(k);
     
   }
-  if(message[0] == '1'){
+  if(message[0] == 'a'){
     Serial.println("in2high");
     digitalWrite(16,HIGH);
     //int k = digitalRead(5);
@@ -127,7 +127,7 @@ void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect("ESP8266Client")) {
+    if (client.connect("ESP8266Client6")) {
       Serial.println("connected");
       // Once connected, publish an announcement...
       client.publish("outTopic", "hello world");
@@ -160,15 +160,15 @@ void loop() {
     //Serial.print(message);
     //Serial.print('\0\r');
     client.publish("outTopic", msg);
-    client.publish("outTopic","WifiState1:true");
+    client.publish("outTopic","WifiState6:true");
     key = digitalRead(16);
     if(key == 1)
     {
-      client.publish("outTopic","MachineState1:true"); 
+      client.publish("outTopic","MachineState6:true"); 
     }
     else
     {
-      client.publish("outTopic","MachineState1:flase");
+      client.publish("outTopic","MachineState6:flase");
     }
     
   }

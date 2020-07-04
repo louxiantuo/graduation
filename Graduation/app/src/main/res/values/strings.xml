@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Graduation</string>
+    <string name="off1">Off1</string>
+    <string name="on1">On1</string>
+    <string name="on2">On2</string>
+    <string name="off2">Off2</string>
+    <string name="on3">On3</string>
+    <string name="off3">Off3</string>
+    <string name="on4">On4</string>
+    <string name="off4">Off4</string>
+    <string name="on5">On5</string>
+    <string name="off5">Off5</string>
+    <string name="fresh">刷新所有设备状态</string>
+    <string name="reset">重启所有设备</string>
 </resources>

@@ -7,7 +7,7 @@ package com.example.louxiantuo.graduation;
 public class UrlData {
 
     //MQTT通信地址
-    public static String mqtt = "tcp://louxiantuo.club:1883";
+    public static String mqtt = "tcp://loumqttserver.duckdns.org:1883";
 
     public static String topic_in = "inTopic";
 
