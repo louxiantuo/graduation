@@ -674,13 +674,14 @@ public class MainActivity extends AppCompatActivity {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void Event(final MessageEvent messageEvent) {
         //Toast.makeText(MainActivity.this,messageEvent.getMessage(),Toast.LENGTH_SHORT).show();
-        new Thread(){
-            @Override
-            public void run()
-            {
+        //不能在子线程更新UI
+//         new Thread(){
+//             @Override
+//             public void run()
+//             {
                 check(messageEvent);
-            }
-        }.start();
+//             }
+//         }.start();
     }
 
     @Override
